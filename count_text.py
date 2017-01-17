@@ -10,11 +10,19 @@ def parser():
     usage = 'Usage:python3 count_word.py [-t <FILE.txt>] [--help]'\
             .format(__file__)
     parser = ArgumentParser(usage=usage)
-    parser.add_argument('-t','--text',dest='input_text',help='text file' )
-
+    parser.add_argument('-l','--word_count_line',dest='word_count',help='行数' )    
+    parser.add_argument('-w','--number_of_words',dest='number_of_words',help='単語数' )
     args = parser.parse_args()
-    if args.input_text:
-        return '{}'.format(count_csv(args.input_text))
+
+    if args.number_of_words:
+        return '{}'.format(count_csv(args.number_of_words))
+    if args.word_count:
+        return '{}'.format(word_line(args.word_count))
+#文字数カウントの関数の追加
+def word_line(input_text):
+    with open(input_text) as f:
+        lines = f.readlines()
+    return len(lines)
 
 def mecab_analysis(text):
     t = mc.Tagger("-Ochasen")
