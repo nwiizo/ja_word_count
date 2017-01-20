@@ -47,7 +47,17 @@ def count_csv(input_text):
         if len(word) > 0:
             print ("%s,%d" % (word, count))
 
+def banner():    
+    print(" #    #   ####   #####   #####            ####    ####   #    #  #    #   #####")
+    print(" #    #  #    #  #    #  #    #          #    #  #    #  #    #  ##   #     #")
+    print(" #    #  #    #  #    #  #    #          #       #    #  #    #  # #  #     #")
+    print(" # ## #  #    #  #####   #    #          #       #    #  #    #  #  # #     #")
+    print(" ##  ##  #    #  #   #   #    #          #    #  #    #  #    #  #   ##     #")
+    print(" #    #   ####   #    #  #####  #######   ####    ####    ####   #    #     #")
+    print("単語,出現回数")
+
 
 if __name__ == '__main__':
+    #banner()
     result = parser()
     print(result)

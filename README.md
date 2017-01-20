@@ -5,7 +5,7 @@
 これらのツールはPython3でのみ動作します。
 ```
 
-$python3 count_text.py -t sample.txt 
+$python3 count_text.py -w sample.txt 
 
 の,78
 メロス,76
